@@ -1,0 +1,10 @@
+  En esta carpeta lo que veo son las imagenes, el lazy loading y unos contenedores.
+
+  La idea principal es tratar de optimizar la pagina de acuerdo a la carga de 
+la cantidad de imagenes, lo que se quiere evitar es la descarga masiva o completa 
+de estas. 
+  Si poseeo muchas imagenes en mi sitio, tarda mas en cargar, en cambio
+con la tecnica de Lazy loading (o mejor dicho, esta metodologia) podemos cargar
+ciertas imagenes que el usuario ve en pantalla y a medida que avanza en la pagina
+recien ir cargando las que siguen, de esta manera la pagina carga mucho mas 
+rapido y a su vez siendo menos pesada.
