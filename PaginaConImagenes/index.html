@@ -5,57 +5,64 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-    <div class="car"> 
-        <a href="https://unsplash.com/@kirsimakov?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" title="Kir Simakov">
-            <img loading="lazy" src="img/kir-simakov-QJE9OiItbAE-unsplash.jpg" >
-        </a>
-    </div>
+    <header>
+        <h1> Lazy loading con imagenes </h1>
+    </header>
 
-    <div class="car"> 
-        <a href="https://unsplash.com/@kirsimakov?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" title="Kir Simakov">
-            <img loading="lazy" src="img/kir-simakov-1O5PSTFK-CE-unsplash.jpg">
-        </a>
-    </div>
+    <main class="contenedor">
 
-    <div class="car"> 
-        <a href="https://unsplash.com/@santesson89?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" title="Andrea De Santis">
-            <img loading="lazy" src="img/andrea-de-santis-2Pna3EnFDcU-unsplash.jpg">
-        </a>
-    </div>
+        <div class="card"> 
+            <a href="https://unsplash.com/@kirsimakov?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" title="Kir Simakov">
+                <img loading="lazy" src="img/kir-simakov-QJE9OiItbAE-unsplash.jpg" >
+            </a>
+        </div>
 
-    <div class="car"> 
-        <a href="https://unsplash.com/@alanw?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" title="Alan W">
-            <img loading="lazy" src="img/alan-w-TlWFWWTrY7A-unsplash.jpg">
-        </a>
-    </div>
+        <div class="card"> 
+            <a href="https://unsplash.com/@kirsimakov?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" title="Kir Simakov">
+                <img loading="lazy" src="img/kir-simakov-1O5PSTFK-CE-unsplash.jpg">
+            </a>
+        </div>
 
-    <div class="car"> 
-        <a href="https://unsplash.com/@miketmofficial?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" title="Mike Cox">
-            <img loading="lazy" src="img/mike-cox-V8zmhziQXIQ-unsplash.jpg">
-        </a>
-    </div>
+        <div class="card"> 
+            <a href="https://unsplash.com/@santesson89?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" title="Andrea De Santis">
+                <img loading="lazy" src="img/andrea-de-santis-2Pna3EnFDcU-unsplash.jpg">
+            </a>
+        </div>
 
-    <div class="car"> 
-        <a href="https://unsplash.com/@hans_isaacson?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" title="Hans Isaacson">
-            <img loading="lazy" src="img/hans-isaacson-GcuvEMEIRqE-unsplash.jpg">
-        </a>
-    </div>
+        <div class="card"> 
+            <a href="https://unsplash.com/@alanw?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" title="Alan W">
+                <img loading="lazy" src="img/alan-w-TlWFWWTrY7A-unsplash.jpg">
+            </a>
+        </div>
 
-    <div class="car"> 
-        <a href="https://unsplash.com/@mahdi_chf?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" title="mahdi chaghari">
-            <img loading="lazy" src="img/mahdi-chaghari-bbSj-2JrWms-unsplash.jpg">
-        </a>
-    </div>
+        <div class="card"> 
+            <a href="https://unsplash.com/@miketmofficial?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" title="Mike Cox">
+                <img loading="lazy" src="img/mike-cox-V8zmhziQXIQ-unsplash.jpg">
+            </a>
+        </div>
+
+        <div class="card"> 
+            <a href="https://unsplash.com/@hans_isaacson?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" title="Hans Isaacson">
+                <img loading="lazy" src="img/hans-isaacson-GcuvEMEIRqE-unsplash.jpg">
+            </a>
+        </div>
+
+        <div class="card"> 
+            <a href="https://unsplash.com/@mahdi_chf?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" title="mahdi chaghari">
+                <img loading="lazy" src="img/mahdi-chaghari-bbSj-2JrWms-unsplash.jpg">
+            </a>
+        </div>
   
-    <div class="car"> 
-        <a href="https://unsplash.com/@matreding?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" title="Mathias P.R. Reding">
-            <img loading="lazy" src="img/mathias-p-r-reding-5bwYLeO4ViA-unsplash.jpg">
-        </a>
-    </div>
+        <div class="card"> 
+            <a href="https://unsplash.com/@matreding?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" title="Mathias P.R. Reding">
+                <img loading="lazy" src="img/mathias-p-r-reding-5bwYLeO4ViA-unsplash.jpg">
+            </a>
+        </div>
 
-
+    </main>
 
     <!-- sin abrir el servidor 9 request, 17.7Mb transferencia, 320ms finalizo  -->
     <!-- abriendo el servidor  9 request, 17.7Mb transferencia, 320ms finalizo 320ms (agregando el metodo target)-->
