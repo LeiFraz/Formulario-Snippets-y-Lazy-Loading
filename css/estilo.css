@@ -1,0 +1,180 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+    background: #E5E5E5;
+}
+
+main{
+    max-width: 800px;
+    width: 90%;
+    margin: auto;
+    padding: 40px;
+}
+
+.formu{
+    display: grid; /*tipo de tabla, grilla*/
+    grid-template-columns: 1fr 1fr; /*como van a ser la tabla, su estructura... tener dos columnas en la misma fila*/
+    gap: 20px; /*espacio entre los elementos*/
+}
+
+.formu__label{
+    display: block; /*para que abarque el 100% de su espacio*/
+    font-weight: 700; /* para la letra negrita*/
+    padding: 10px; /*relleno interno*/
+    cursor: pointer;
+}
+
+.formu__grupo-input{
+    position: relative; /*para que tenga una posicion relativa, o sea fija y poder poner el icono dentro del label*/
+}
+
+.formu__input{
+    width: 100%;
+    background: #fff;
+    border: 3px solid transparent;
+    border-radius: 3px;
+    height: 45px; 
+    line-height: 45px; /*nos aseguramos que el texto quede centrado*/
+    padding: 0 40px 0 10px;
+    transition: .3s ease all; /*una transicion para todas las propiedades*/
+}
+
+.formu__input:focus{
+    border: 3px solid #0075FF; /*cuando el input tiene el foco, el borde se pone de color azul*/
+    outline: none; /*para quitarle un pequeño subrayado que pone el navegador*/
+    box-shadow: 3px 0px 30px rgba(163, 163, 163, 0.4);
+}
+
+.formu__input-error{
+    font-size: 12px;
+    margin-bottom: 0;
+    display: none;
+}
+
+.formu__input-error-activo{ /*el "-activo" es un modificador, cuando se activa hace el codigo de adentro*/
+    display: block;
+}
+
+.formu__validacion-estado{
+    position: absolute;
+    right: 10px;
+    bottom: 15px;
+    z-index: 100;
+    font-size: 16px;
+    opacity: 0;
+}
+
+.formu__checkbox{
+    margin-right: 10px;
+}
+
+.formu__grupo-terminos, /*no recuerdo haberlo hecho tal cual asi*/
+.formu__mensaje,
+.formu__grupo-btn-enviar{ 
+    grid-column: span 2; /*le digo a esos 3 que tengan una fila completa, ocupando las dos columnas*/
+}
+
+.formu__mensaje{
+    height: 45px;
+    line-height: 45px;
+    background: #F66060;
+    padding: 0 15px;
+    border-radius: 3px;
+    display: none; /*que no sea vea hasta que salte el error*/
+}
+
+.formu__mensaje-activo{ /*modificador de ACTIVO*/
+    display: block;
+}
+
+.formu__mensaje p{ /*quiero que el parrafo que ese div tenga dentro, tenga un margen de 0*/
+    margin: 0;
+}
+
+.formu__grupo-btn-enviar{
+    display: flex; 
+    /*quiero que el boton abarque todo, a su vez si pongo solamente esta propiedad el texto que haya, 
+    lo pone a lado del boton*/
+    flex-direction: column; 
+    /*la direccion hace referencia a como se van a acomodar los elementos
+    aqui estaria arreglando el hecho de que se ponga a lado, con decirle COLUMN se ponen uno debajo del otro*/
+    align-items: center;
+    /*al centrar los elementos, se ponen en el medio, y en este caso como abarcan el centro, se ponen
+    de un tamaño adecuado*/
+}
+
+.formu__btn{
+    height: 45px;
+    line-height: 45px;
+    width: 30%;
+    background: #000;
+    color: #fff;
+    font-weight: bold; /*letra negrita*/
+    border: none; /*quitar borde por defecto del boton*/
+    border-radius: 3px;
+    cursor: pointer;
+    transition: .1s ease all;
+}
+
+.formu__btn:hover{
+    box-shadow: 3px 0 30px rgba(163, 163, 163, 1);
+}
+
+.formu__mensaje-exito{
+    font-size: 14px;
+    color: #119200;
+    display: none;
+}
+
+.formu__mensaje-exito-activo{
+    display: block;
+}
+
+/* ------ ESTILOS PARA LA VALIDACION DEL ESTADO (ICONO DE ERROR O CONFIRMACION) -------*/
+
+.formu__grupo-correcto .formu__validacion-estado{
+     color: #1ed12d;
+     opacity: 1;
+}
+
+.formu__grupo-incorrecto .formu__label {
+    color: #bb2929;
+}
+
+.formu__grupo-incorrecto .formu__validacion-estado 
+{
+    color: #bb2929;
+    opacity: 1;
+}
+
+.formu__grupo-incorrecto .formu__input 
+{
+    border: 3px solid #bb2929;
+}
+
+/* ------ MEDIAQUERIES -------*/
+/*para que la pagina no quede tan apretada, pasar de dos columnas a 1, para que cuando cambie la
+resolucion de pantalla se adapte*/
+
+@media screen and (max-width: 800px){
+/*accedo al MEDIA, quiero que sea de la PANTALLA, Y cuando el ANCHO MAXIMO llegue a 800PX
+accedo al formulario, cambio la grilla a 1 columna... y tambien los GRUPOS DE TERMINOS, MENSAJES y BTN
+los cambiaria, ya que entre sus propiedades tenian un SPAN de 2 (dos columnas)*/
+
+    .formu{
+        grid-template-columns: 1fr;
+    }
+
+     /*no recuerdo haberlo hecho tal cual asi*/
+    .formu__mensaje,
+    .formu__grupo-btn-enviar{ 
+        grid-column: 1; /*le digo a esos 3 que tengan una fila completa, ocupando las dos columnas*/
+    }
+
+    .formu__btn{
+        width: 100%;
+    }
+}

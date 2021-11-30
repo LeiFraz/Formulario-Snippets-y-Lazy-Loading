@@ -8,23 +8,117 @@
     
     <title> Formulario con css, html y js</title>
     
-    <link rel="stylesheet" href="css/estilos.css">
     <link rel="stylesheet" href="css/normalizeEstilos.css">
-
-    <script src=""></script>
+    <link rel="stylesheet" href="css/estilo.css">
+    
     <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+    <script src="js/formularioExpresionesRegulares.js"></script>
 
 </head>
 
 <body>
     <main>
         <form action="" class="formu" id="formu">
+            <!-- GRUPO: Usuario-->
             <div class="formu__grupo" id="grupo__usuario">
+
                 <label for="usuario" class="formu__label">Usuario</label> <!--el FOR es para hacer mencion a el input usuario-->
-                <div>
-                    <input type="text" class="formu__input" name="usuario" id="usuario" placehokder="ingresa tu nombre">
-                    <i class="fas fa-times-circle"></i> <!--va a funcionar por el script de FONTAWESOME-->
+
+                <div class="formu__grupo-input">
+                    <input type="text" class="formu__input" name="usuario" id="usuario" placeholder="ingresa tu nombre">
+                    <i class="formu__validacion-estado fas fa-times-circle"></i> <!--va a funcionar por el script de FONTAWESOME-->
                 </div>
+
+                <p class="formu__input-error"> El usuario tiene que ser de 4 a 16 digitos y solo puede contener numeros, letras y guion bajo.</p>
+            </div>
+
+
+            <!-- GRUPO: Nombre-->
+            <div class="formu__grupo" id="grupo__nombre">
+
+                <label for="nombre" class="formu__label">Nombre</label> <!--el FOR es para hacer mencion a el input nombre-->
+
+                <div class="formu__grupo-input">
+                    <input type="text" class="formu__input" name="nombre" id="nombre" placeholder="ingresa tu nombre">
+                    <i class="formu__validacion-estado fas fa-times-circle"></i> <!--va a funcionar por el script de FONTAWESOME-->
+                </div>
+
+                <p class="formu__input-error"> El nombre tiene que ser de 4 a 16 digitos y solo puede contener numeros, letras y guion bajo.</p>
+            </div>
+
+
+            <!-- GRUPO: Contraseña-->
+            <div class="formu__grupo" id="grupo__password">
+
+                <label for="password" class="formu__label">Contraseña</label> <!--el FOR es para hacer mencion a el input password-->
+
+                <div class="formu__grupo-input">
+                    <input type="password" class="formu__input" name="password" id="password">
+                    <i class="formu__validacion-estado fas fa-times-circle"></i> <!--va a funcionar por el script de FONTAWESOME-->
+                </div>
+
+                <p class="formu__input-error"> La contraseña tiene que ser de 4 a 12 digitos</p>
+            </div>
+
+
+            <!-- GRUPO: Contraseña 2-->
+            <div class="formu__grupo" id="grupo__password2">
+
+                <label for="password2" class="formu__label">Repetir Contraseña</label> <!--el FOR es para hacer mencion a el input password-->
+
+                <div class="formu__grupo-input">
+                    <input type="password" class="formu__input" name="password2" id="password2">
+                    <i class="formu__validacion-estado fas fa-times-circle"></i> <!--va a funcionar por el script de FONTAWESOME-->
+                </div>
+
+                <p class="formu__input-error"> Ambas contraseñas deben ser iguales</p>
+            </div>
+
+
+            <!-- GRUPO: Correo Electronico-->
+            <div class="formu__grupo" id="grupo__correo">
+
+                <label for="correo" class="formu__label">Correo Electrónico</label> <!--el FOR es para hacer mencion a el input correo-->
+
+                <div class="formu__grupo-input">
+                    <input type="email" class="formu__input" name="correo" id="correo" placeholder="ingresa tu correo">
+                    <i class="formu__validacion-estado fas fa-times-circle"></i> <!--va a funcionar por el script de FONTAWESOME-->
+                </div>
+
+                <p class="formu__input-error"> El correo solo puede contener numeros, letras, puntos, guiones y guion bajo.</p>
+            </div>
+
+
+            <!-- GRUPO: Telefono-->
+            <div class="formu__grupo" id="grupo__telefono">
+
+                <label for="telefono" class="formu__label">Teléfono</label> <!--el FOR es para hacer mencion a el input telefono-->
+
+                <div class="formu__grupo-input">
+                    <input type="text" class="formu__input" name="telefono" id="telefono" placeholder="ingresa tu telefono">
+                    <i class="formu__validacion-estado fas fa-times-circle"></i> <!--va a funcionar por el script de FONTAWESOME-->
+                </div>
+
+                <p class="formu__input-error"> El telefono solo puede contener numeros y el maximo es 14 digitos.</p>
+            </div>
+
+
+            <!-- Grupo: Terminos y Condiciones-->
+            <div class="formu__grupo" id="grupo__terminos">
+                <label class="formu__label">
+                    <input class="formu__checkbox" type="checkbox" name="terminos" id="terminos">
+                    Acepto los Terminos y Condiciones
+                </label>
+            </div>
+
+
+            <div class="formu__mensaje" id="formu__mensaje">
+                <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor complete el formulario correctamente.</p>
+            </div>
+
+            <div class="formu__grupo formu__grupo-btn-enviar">
+                <button type="submit" class="formu__btn">Enviar</button>
+                <p class="formu__mensaje-exito" id="formu__mensaje-exito"> Formulario enviado exitosamente!</p>
             </div>
         </form>
     </main>
