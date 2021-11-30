@@ -13,3 +13,16 @@ const expresiones = {
 	telefono: /^\d{7,14}$/ // 7 a 14 numeros.
 }
 
+const validarFormulario = () => {
+	console.log('me ejecuto');
+}
+
+inputs.forEach((input) => {
+	input.addEventListener('keyup', validarFormulario);
+	input.addEventListener('blur', validarFormulario);
+});
+
+/*creamos un evento que cuando se precione el boton de submit, se realize una funcion anonima*/
+formulario.addEventListener('submit', (e) => {
+	e.preventDefault(); /*el usuario ya no envia los datos cuando se pone esta sentencia*/
+});
