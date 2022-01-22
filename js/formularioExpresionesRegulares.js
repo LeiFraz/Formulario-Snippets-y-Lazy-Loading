@@ -13,8 +13,30 @@ const expresiones = {
 	telefono: /^\d{7,14}$/ // 7 a 14 numeros.
 }
 
-const validarFormulario = () => {
-	console.log('me ejecuto');
+const validarFormulario = (evento) => {
+	/*console.log('me ejecuto');*/
+	/*console.log(evento.target.name);*/
+
+	switch(evento.target.name){
+		case "usuario":
+			console.log("funciona");
+		break;
+		case "nombre":
+			console.log("funciona");
+		break;
+		case "password":
+			console.log("funciona");
+		break;
+		case "password2":
+			console.log("funciona");
+		break;
+		case "correo":
+			console.log("funciona");
+		break;
+		case "telefono":
+			console.log("funciona");
+		break;
+	}
 }
 
 inputs.forEach((input) => {
