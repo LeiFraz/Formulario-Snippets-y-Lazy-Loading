@@ -16,7 +16,7 @@ main{
 
 .formu{
     display: grid; /*tipo de tabla, grilla*/
-    grid-template-columns: 1fr 1fr; /*como van a ser la tabla, su estructura... tener dos columnas en la misma fila*/
+    grid-template-columns: 1fr 1fr; /*como va a ser la tabla, su estructura... tener dos columnas en la misma fila*/
     gap: 20px; /*espacio entre los elementos*/
 }
 
@@ -32,16 +32,18 @@ main{
 }
 
 .formu__input{
-    width: 100%;
+    width: 100%; /*100% para que abarque todo el espacio disponible*/
     background: #fff;
-    border: 3px solid transparent;
+    border: 3px solid transparent; /*se pone transparent para que no se remarque (luego se cambia con la propiedad focus)*/
     border-radius: 3px;
     height: 45px; 
-    line-height: 45px; /*nos aseguramos que el texto quede centrado*/
+    line-height: 45px; /*nos aseguramos que el texto quede centrado.. ALTURA DE LINEA*/
     padding: 0 40px 0 10px;
     transition: .3s ease all; /*una transicion para todas las propiedades*/
 }
 
+/*poner la clase y luego :"algo" es una propiedad que sirve para que cuando suceda cierta accion
+o evento, este reaccione de x manera.*/
 .formu__input:focus{
     border: 3px solid #0075FF; /*cuando el input tiene el foco, el borde se pone de color azul*/
     outline: none; /*para quitarle un pequeño subrayado que pone el navegador*/
@@ -54,7 +56,9 @@ main{
     display: none;
 }
 
-.formu__input-error-activo{ /*el "-activo" es un modificador, cuando se activa hace el codigo de adentro*/
+/*el "-activo" es un modificador, cuando se activa(se añade la clase) hace el codigo de adentro, 
+trata la misma clase que lleva antes de la palabra ACTIVO*/
+.formu__input-error-activo{ 
     display: block;
 }
 
@@ -62,18 +66,18 @@ main{
     position: absolute;
     right: 10px;
     bottom: 15px;
-    z-index: 100;
+    z-index: 100; /*para asegurar que este por encima de otros elementos*/
     font-size: 16px;
-    opacity: 0;
+    opacity: 0; /*para que no se muestre, solo queremos que se vea cuando sale el error*/
 }
 
 .formu__checkbox{
     margin-right: 10px;
 }
 
-.formu__grupo-terminos, /*no recuerdo haberlo hecho tal cual asi*/
-.formu__mensaje,
-.formu__grupo-btn-enviar{ 
+.formu__grupo-terminos, /*Terminos y Condiciones*/
+.formu__mensaje, /*mensaje de error*/
+.formu__grupo-btn-enviar{  
     grid-column: span 2; /*le digo a esos 3 que tengan una fila completa, ocupando las dos columnas*/
 }
 
@@ -90,6 +94,9 @@ main{
     display: block;
 }
 
+/*esto se hace debido que como el mensaje de error esta dentro de un parrafo, para solucionarlo
+solamente se accede a dicho parrafo dentro del DIV, y se le pone que los margenes sean 0. Por
+defecto los elementos siempre tienen algo de margenes.*/
 .formu__mensaje p{ /*quiero que el parrafo que ese div tenga dentro, tenga un margen de 0*/
     margin: 0;
 }
@@ -135,11 +142,17 @@ main{
 
 /* ------ ESTILOS PARA LA VALIDACION DEL ESTADO (ICONO DE ERROR O CONFIRMACION) -------*/
 
+/*si lo del input es correcto, se añade la clase formu__grupo-correcto y a su vez también se pone
+la clase del icono, que tiene la clase formu__validacion-estado... este ultimo es el que se modifica
+ambas clases deben estar para que se aplique.*/
+
+/*opcion de cuando el input es CORRECTO*/
 .formu__grupo-correcto .formu__validacion-estado{
      color: #1ed12d;
      opacity: 1;
 }
 
+/*opcion de cuando el input es INCORRECTO*/
 .formu__grupo-incorrecto .formu__label {
     color: #bb2929;
 }
